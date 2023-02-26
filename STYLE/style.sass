@@ -1,0 +1,539 @@
+@use '../DAWSON/reset'
+@use '../DAWSON/log'
+@use '../DAWSON/flexbox'
+@use '../DAWSON/spacing'
+@use '../DAWSON/position'
+@use '../DAWSON/Fonts'
+@use '../DAWSON/Webkits'
+
+
+// Body
+body
+    overflow-x: hidden
+    width: 100%
+    background: #121020
+    color: #121020
+
+
+// Loader
+.loadhtml
+    //overflow: hidden
+    animation: loading 1s ease-in-out 3s forwards
+
+.loader
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: absolute
+    background: #121020
+    width: 100vw
+    height: 100vh
+    z-index: 99
+    opacity: 0
+    animation: pouf 1s ease-in-out 2s forwards
+    .loading
+        opacity: 0
+        width: 320px
+        animation: load 1s ease-in-out 0.5s forwards
+    img
+        opacity: 0
+        width: 260px
+        animation: land 1s ease-in-out forwards
+    .loadbar, .loadbarbg
+        height: 8px
+        border-radius: 999px
+        position: absolute
+        bottom: 30vh
+    .loadbar
+        background: #FFFDF9
+        animation: charge 1s ease-in-out 0.8s forwards
+    .loadbarbg
+        width: 320px
+        background: grey
+
+
+// Barre de Navigation
+.navbar
+    z-index: 2
+    position: fixed
+    display: flex
+    justify-content: center
+    width: 100vw
+    transform: translateY(-200px)
+    animation: land2 0.8s ease-in-out forwards
+    
+nav
+    font-weight: 800
+    margin-top: 20px
+    position: absolute
+    width: calc( 90% - 20vw )
+    z-index: 1
+    background: rgba(0, 0, 0, 0.4)
+    backdrop-filter: blur(6px)
+    border: solid 1px rgba(255, 255, 255, 0.2)
+    border-radius: 10px
+
+    img
+        width: 50px
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            transform: scale(1.1)
+
+    .liens
+        display: flex
+        flex-grow: 1
+        justify-content: space-evenly
+
+        a
+            text-decoration: none
+            color: #FFFDF9
+            font-size: 1.1rem
+            letter-spacing: 1px
+            transition: 0.3s
+            &:hover
+                transform: scale(1.1)
+
+        .barre
+            transform: translateY(5px)
+            background: #7C2609
+            width: 0%
+            height: 3px
+            transition: 0.2s ease-in-out
+
+        div:hover .barre
+            width: 100%
+
+
+// Carousel
+.carousel
+    background: #FFFDF9
+    text-align: center
+    top: 0px
+    z-index: 0
+    overflow-x: scroll !important
+    overflow-y: hidden
+    scroll-snap-type: x mandatory
+    white-space: nowrap
+    scroll-snap-points-x: 100vw
+
+    img
+        width: 100vw
+        height: 100%
+        object-fit: cover
+        scroll-snap-align: start
+        filter: brightness(0.6)
+
+.carousel::-webkit-scrollbar
+    height: 0px
+
+#signature
+    width: calc( 160px + 22vw - 5vh )
+    height: unset
+    filter: brightness(2)
+    position: absolute
+    top: 110px
+    left: 50%
+    transform: translateX(-50%)
+
+// Présentation
+.present
+    background: #FFFDF9
+    display: grid
+    place-items: center
+    h3
+        margin-top: 1rem
+        font-size: 4rem
+        font-weight: 900
+        background-image: linear-gradient(90deg, rgba(208,149,25,1) 0%, rgba(124,38,9,1) 40%, rgba(18,16,32,1) 90%)
+        -webkit-background-clip: text
+        background-clip: text
+        color: transparent
+        background-size: 300%
+        animation: bgtext 3s infinite alternate-reverse
+    .mojipres
+        margin-top: 1rem
+        height: 130px
+        margin-left: 30px
+
+
+// Footer
+footer
+    box-sizing: border-box
+    width: 100%
+    height: 400px
+    overflow: hidden
+    color: #FFFDF9
+
+    .bg
+        box-sizing: border-box
+        filter: blur(5px) brightness(0.5)
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transform: scale(1.05)
+
+    .box
+        height: 240px
+        width: 90%
+        margin: auto
+        position: relative
+        bottom: 490px
+        display: flex
+        gap: 10px
+        align-items: center
+        div
+            text-align: center
+            width: 50%
+            height: 90%
+            h3
+                padding-bottom: 0.8rem
+            div
+                height: max-content
+                width: max-content
+                margin: auto
+                padding: 0.3rem
+                cursor: pointer
+                transition: 0.4s
+                &:hover
+                    letter-spacing: 2px
+                    font-weight: 900
+                    text-shadow: 0 0 10px #000
+
+    .copy
+        font-size: 0.6rem
+        position: relative
+        bottom: 110px
+        text-align: center
+
+    .legal
+        display: flex
+        justify-content: center
+        padding: 12px 12vw 12px 12vw
+        box-sizing: border-box
+        position: relative
+        bottom: 94px
+        background: #121020
+        font-size: 0.7rem
+        .liens
+            display: flex
+            div
+                margin: 0 4px
+
+    .reseaux
+        max-width: 900px
+        margin: auto
+        padding: 0 12vw 0 12vw
+        box-sizing: border-box
+        position: relative
+        bottom: 140px
+
+        img
+            width: 40px
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+                transform: scale(1.2)
+
+// Page A Propos
+.damier
+    box-sizing: border-box
+    padding: 5vw
+    color: #121020
+    display: flex
+    flex-direction: column
+    .fin, .debut
+        box-sizing: border-box
+        padding: 2rem
+        text-align: center
+        font-size: calc( 0.7rem + 1vw )
+    .fin
+        background: #121020
+        color: #7C2609
+        font: 700 4vw Dancing Script, Serif
+
+.ligne
+    display: flex
+    div
+        background: #FFFDF9
+        box-sizing: border-box
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 50%
+        height: 40vw
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .texte
+        padding: 0 5vw 0 5vw
+        line-height: 2.5vw
+        font-size: calc( 0.4rem + 0.8vw )
+
+
+// Page Contact
+.infocontact
+    overflow: hidden
+    padding-top: 5rem
+    color: #FFFDF9
+    background: #7C2609
+    display: flex
+    height: 400px
+    width: 100%
+    .couleur, .image
+        display: grid
+        place-items: center
+        min-width: 50%
+    .couleur
+        img
+            transform: translateY(100px)
+            opacity: 0
+            width: 180px
+            animation: land3 0.6s ease-in-out 1.4s forwards
+    .tout
+        box-sizing: border-box
+        padding-top: 4rem
+        height: 90%
+        width: 90%
+        line-height: 2
+        .souligne
+            background: #FFFDF9
+            height: 2px
+            width: 100px
+            margin: 8px 0 8px 1px
+            opacity: 0
+            transform: translateX(100px)
+            animation: land2 1s ease-in-out 0.4s forwards
+        .statut
+            font-size: 0.8rem
+            margin-bottom: 1rem
+            opacity: 0
+            transform: translateX(100px)
+            animation: land2 1s ease-in-out 0.6s forwards
+        .nom
+            opacity: 0
+            transform: translateX(100px)
+            animation: land2 1s ease-in-out 0.2s forwards
+        .tel
+            margin-bottom: 0.5rem
+            opacity: 0
+            transform: translateX(100px)
+            animation: land2 1s ease-in-out 0.8s forwards
+        .mail
+            opacity: 0
+            transform: translateX(100px)
+            animation: land2 1s ease-in-out 1s forwards
+    .image
+        img
+            width: 90%
+            height: 90%
+            object-fit: cover
+            transform: translateX(-110%)
+            animation: land2 0.8s ease-in-out 0.2s forwards
+
+.formulaire
+    color: #121020
+    background: #FFFDF9
+    display: grid
+    place-items: center
+    h2
+        margin-top: 4rem
+        opacity: 0
+        transform: translateX(30px)
+        animation: land2 0.8s ease-in-out 1.2s forwards
+    h3
+        margin-bottom: 3rem
+        opacity: 0
+        transform: translateX(-30px)
+        animation: land2 0.8s ease-in-out 1.2s forwards
+    form, form div
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    label
+        opacity: 0
+        transform: translateY(200px)
+        animation: land2 0.8s ease-in-out 1.4s forwards
+    input[type=email], textarea
+        text-align: center
+        width: 300px
+        border: none
+        border-radius: 2rem
+        margin: 1rem
+        padding: 5px 15px 5px 15px
+        background: #FFFDF9
+        border: 2px solid #121020
+        transition: 0.4s
+        opacity: 0
+        transform: translateY(200px)
+        animation: land2 0.8s ease-in-out 1.6s forwards
+        &:hover
+            width: 320px
+    .marie
+        display: none
+    textarea
+        border-radius: 0.8rem
+        box-sizing: border-box
+        padding: 1rem
+        width: 300px
+        height: 200px
+        padding: 5px 15px 5px 15px
+        text-align: justify
+    input[type=submit]
+        background: lightgreen
+        padding: 5px 15px 5px 15px
+        border: none
+        border-radius: 2rem
+        font-weight: 900
+        color: white
+        text-shadow: 0 0 6px black
+        margin-top: 1rem
+        margin-bottom: 4rem
+        transition: 0.4s
+        cursor: pointer
+        &:hover
+            box-shadow: 6px 6px 0 0 grey
+            scale: 1.2
+
+
+// Page Tarifs
+.infotarifs
+    display: flex
+    justify-content: space-between
+    align-items: end
+    overflow: unset
+    color: #FFFDF9
+    background: #7C2609
+    display: flex
+    height: 300px
+    width: 100%
+    text-align: center
+    .moji
+        height: 70%
+        margin-left: 5vw
+        opacity: 0
+        transform: translateX(-200px)
+        animation: land2 0.8s ease-in-out 0.8s forwards
+    .tarif
+        text-align: justify
+        padding-bottom: 70px
+        padding-left: 30px
+        opacity: 0
+        transform: translateY(100px)
+        animation: land2 0.8s ease-in-out 0.6s forwards
+    .banner
+        height: 100%
+        opacity: 0
+        transform: translateX(200px)
+        animation: land2 0.8s ease-in-out 0.4s forwards
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .gradende
+            background: linear-gradient(90deg, rgba(124,38,9,1) 2%, rgba(71,0,190,0) 40%)
+            width: 100%
+            height: 300px
+            position: absolute
+            backdrop-filter: brightness(0.8) sepia(0.8) blur(2px)
+
+.toutarif
+    background: #000
+    margin: auto
+    background: #FFFDF9
+    padding: 4rem 1rem
+    min-height: 300px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    align-items: center
+    perspective: 3000px
+    .card
+        margin: 2rem 0
+        width: 18vw
+        height: calc( 18vw / 1.5 )
+        text-align: center
+        transform-style: preserve-3d
+        &:hover .bg
+            transform: rotateX(30deg)
+            filter: brightness(0.4)
+        &:hover .icone
+            transform: translateY(-30px) translateZ(10px)
+            opacity: 1
+        &:hover .titre
+            opacity: 0
+        .bg
+            z-index: 1
+            border-radius: 10px
+            width: 100%
+            height: 100%
+            object-fit: cover
+            filter: brightness(0.7)
+            transition: 0.3s
+        .icone
+            opacity: 0
+            z-index: 2
+            position: relative
+            bottom: 180px
+            width: 100px
+            filter: invert(1) drop-shadow(0 0 10px black)
+            transition: 0.3s
+        .titre
+            position: relative
+            bottom: 260px
+            color: #FFFDF9
+            font-weight: 900
+            letter-spacing: 2px
+            text-shadow: 0 0 20px black
+            font-size: 1.5rem
+        .prix
+
+@media screen and (width < 768px)
+    .toutarif .card
+        width: 45vw
+        height: calc( 45vw / 1.5 )
+
+        
+// Animations
+@keyframes pouf
+    100%
+        opacity: 0
+        pointer-events: none
+
+@keyframes loading
+    100%
+        overflow: unset
+
+@keyframes land
+    100%
+        transform: translateY(-30px)
+        opacity: 1
+
+@keyframes land2
+    100%
+        transform: translateY(0px)
+        opacity: 1
+
+@keyframes land3
+    100%
+        transform: translateY(-5px)
+        opacity: 1
+
+@keyframes charge
+    0%
+        width: 0px
+    100%
+        width: 320px
+
+@keyframes load
+    100%
+        opacity: 1
+
+@keyframes bgtext
+    0%
+        background-position: 0%
+    100%
+        background-position: 100%
