@@ -17,8 +17,8 @@ body
 
 // Loader
 .loadhtml
-    //overflow: hidden
-    animation: loading 1s ease-in-out 3s forwards
+    overflow: hidden
+    animation: loading 1s linear 1.5s forwards
 
 .loader
     display: flex
@@ -30,8 +30,7 @@ body
     width: 100vw
     height: 100vh
     z-index: 99
-    opacity: 0
-    animation: pouf 1s ease-in-out 2s forwards
+    animation: pouf 1s ease-in-out 1.5s forwards
     .loading
         opacity: 0
         width: 320px
@@ -60,8 +59,8 @@ body
     display: flex
     justify-content: center
     width: 100vw
-    transform: translateY(-200px)
-    animation: land2 0.8s ease-in-out forwards
+    transform: translateY(-120px)
+    animation: land2 1s ease-in-out forwards
     
 nav
     font-weight: 800
@@ -118,12 +117,15 @@ nav
     white-space: nowrap
     scroll-snap-points-x: 100vw
 
-    img
+    img:not(#signature)
         width: 100vw
         height: 100%
         object-fit: cover
         scroll-snap-align: start
         filter: brightness(0.6)
+        opacity: 0
+        transform: translateY(-80px)
+        animation: land2 0.8s ease-in-out 2s forwards
 
 .carousel::-webkit-scrollbar
     height: 0px
@@ -136,26 +138,68 @@ nav
     top: 110px
     left: 50%
     transform: translateX(-50%)
+    opacity: 0
+    margin-top: 100px
+    animation: sign 0.8s ease-in-out 2.2s forwards
+
 
 // Présentation
 .present
+    padding: 4rem 0
     background: #FFFDF9
     display: grid
     place-items: center
     h3
+        text-align: center
         margin-top: 1rem
-        font-size: 4rem
+        font-size: 3rem
         font-weight: 900
         background-image: linear-gradient(90deg, rgba(208,149,25,1) 0%, rgba(124,38,9,1) 40%, rgba(18,16,32,1) 90%)
         -webkit-background-clip: text
         background-clip: text
         color: transparent
         background-size: 300%
-        animation: bgtext 3s infinite alternate-reverse
+        opacity: 0
+        transform: translateY(50px)
+        animation: bgtext 3s infinite alternate-reverse, land2 1s ease-in-out 2.6s forwards
+    h4
+        margin-top: 3rem
+        font-size: 1.6rem
+        margin-top: 1rem
+        text-align: center
+        padding: 10px
+        opacity: 0
+        transform: translateX(-80px)
+        animation: land2 0.8s ease-in-out 3s forwards
     .mojipres
         margin-top: 1rem
         height: 130px
-        margin-left: 30px
+        margin-left: 20px
+        opacity: 0
+        transform: translateY(50px)
+        animation: land2 0.6s ease-in-out 2.8s forwards
+    .explik
+        margin: 0 8vw
+        text-align: justify
+        padding: 10px
+        opacity: 0
+        transform: translateX(80px)
+        animation: land2 0.8s ease-in-out 3s forwards
+.rdv
+    width: auto
+    padding: 10px 25px
+    color: #FFFDF9
+    background: #7C2609
+    text-decoration: none
+    border-radius: 999px
+    margin: 2rem 0
+    transition: 0.3s
+    opacity: 0
+    transform: scale(0)
+    animation: pop 1s cubic-bezier(.78,-0.2,.18,1.66) 3.2s forwards
+    &:hover
+        box-shadow: 8px 8px 0px grey
+        scale: 1.2
 
 
 // Footer
@@ -537,3 +581,13 @@ footer
         background-position: 0%
     100%
         background-position: 100%
+
+@keyframes sign
+    100%
+        margin-top: 0
+        opacity: 1
+
+@keyframes pop
+    100%
+        transform: scale(1)
+        opacity: 1
