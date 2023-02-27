@@ -6,14 +6,12 @@
 @use '../DAWSON/Fonts'
 @use '../DAWSON/Webkits'
 
-
 // Body
 body
     overflow-x: hidden
     width: 100%
     background: #121020
     color: #121020
-
 
 // Loader
 .loadhtml
@@ -50,7 +48,6 @@ body
     .loadbarbg
         width: 320px
         background: grey
-
 
 // Barre de Navigation
 .navbar
@@ -104,6 +101,44 @@ nav
         div:hover .barre
             width: 100%
 
+.mobilenav
+    opacity: 0
+    pointer-events: none
+    position: fixed
+    top: 0
+    z-index: 9
+    width: 100vw
+    width: 100dvw
+    height: 70px
+    background: #FFFDF9
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    box-shadow: 0 0 12px grey
+    .ico
+        height: 100%
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: center
+        font-size: 0.7rem
+        img
+            height: 30%
+
+@media screen and (width < 600px )
+    nav
+        opacity: 0
+        pointer-events: none
+    .carousel
+        margin-top: 70px
+        height: 240px !important
+    .present
+        padding: 2rem 0 !important
+    .mobilenav
+        opacity: unset
+        pointer-events: unset
+
 
 // Carousel
 .carousel
@@ -132,17 +167,16 @@ nav
     height: 0px
 
 #signature
-    width: calc( 150px + 20vw - 5vh )
+    width: calc( 220px + 10vw )
     height: unset
     filter: brightness(2)
     position: absolute
-    top: 100px
+    top: 120px
     left: 50%
     transform: translateX(-50%)
     opacity: 0
     margin-top: 100px
     animation: sign 0.8s ease-in-out 2.2s forwards
-
 
 // Présentation
 .present
@@ -150,19 +184,6 @@ nav
     background: #FFFDF9
     display: grid
     place-items: center
-    h3
-        text-align: center
-        margin-top: 1rem
-        font-size: 3rem
-        font-weight: 900
-        background-image: linear-gradient(90deg, rgba(208,149,25,1) 0%, rgba(124,38,9,1) 40%, rgba(18,16,32,1) 90%)
-        -webkit-background-clip: text
-        background-clip: text
-        color: transparent
-        background-size: 300%
-        opacity: 0
-        transform: translateY(50px)
-        animation: bgtext 3s infinite alternate-reverse, land2 1s ease-in-out 2.6s forwards
     h4
         margin-top: 3rem
         font-size: 1.6rem
@@ -186,6 +207,21 @@ nav
         opacity: 0
         transform: translateX(80px)
         animation: land2 0.8s ease-in-out 3s forwards
+
+.gradentext
+        text-align: center
+        margin-top: 1rem
+        font-size: 3rem
+        font-weight: 900
+        background-image: linear-gradient(90deg, rgba(208,149,25,1) 0%, rgba(124,38,9,1) 40%, rgba(18,16,32,1) 90%)
+        -webkit-background-clip: text
+        background-clip: text
+        color: transparent
+        background-size: 300%
+        opacity: 0
+        transform: translateY(50px)
+        animation: bgtext 3s infinite alternate-reverse, land2 1s ease-in-out 2.6s forwards
+
 .rdv
     width: auto
     padding: 10px 25px
@@ -201,7 +237,6 @@ nav
     &:hover
         box-shadow: 8px 8px 0px grey
         scale: 1.2
-
 
 // Footer
 footer
@@ -221,23 +256,24 @@ footer
 
     .box
         height: 240px
-        width: 90%
+        width: 80%
+        padding-left: 10%
+        padding-top: 20px
         margin: auto
         position: relative
         bottom: 490px
         display: flex
-        gap: 10px
+        justify-content: space-between
         align-items: center
         div
-            text-align: center
-            width: 50%
+            text-align: justify
+            width: 500px
             height: 90%
             h3
                 padding-bottom: 0.8rem
             div
                 height: max-content
-                width: max-content
-                margin: auto
+                max-width: max-content
                 padding: 0.3rem
                 cursor: pointer
                 transition: 0.4s
@@ -281,22 +317,29 @@ footer
             &:hover
                 transform: scale(1.2)
 
-// Page A Propos
+// Page Decouvrir
 .damier
     box-sizing: border-box
-    padding: 5vw
+    padding: 0 5vw
+    margin-bottom: 5vw
     color: #121020
     display: flex
     flex-direction: column
+    opacity: 0
+    transform: translateY(140px)
+    animation: land2 1s ease-in-out 1s forwards
+    position: relative
+    z-index: -3
     .fin, .debut
         box-sizing: border-box
         padding: 2rem
+        color: #FFFDF9
         text-align: center
         font-size: calc( 0.7rem + 1vw )
     .fin
         background: #121020
-        color: #7C2609
-        font: 700 4vw Dancing Script, Serif
+        font-size: 1.4rem
+        letter-spacing: 4px
 
 .ligne
     display: flex
@@ -316,6 +359,50 @@ footer
         padding: 0 5vw 0 5vw
         line-height: 2.5vw
         font-size: calc( 0.4rem + 0.8vw )
+
+
+.discover
+    width: 100%
+    height: 400px
+    overflow: hidden
+    .bg
+        position: relative
+        object-fit: cover
+        width: 100%
+        height: 400px
+        z-index: -1
+        filter: blur(2px) brightness(0.1)
+        opacity: 0
+        transform: translateY(-140px)
+        animation: land2 0.6s ease-out 0.2s forwards
+    .gradentext
+        color: #FFFDF9
+        position: relative
+        top: -300px
+        animation: land2 1s ease-in-out 0.4s forwards
+    .flexbas
+        display: flex
+        align-items: flex-end
+        padding: 0 5vw
+        height: 200px
+        position: relative
+        top: -280px
+        justify-content: center
+        .text
+            color: #FFFDF9
+            width: 100%
+            height: 100%
+            display: grid
+            place-items: center
+            text-align: center
+            opacity: 0
+            transform: translateY(140px)
+            animation: land2 1s ease-in-out 0.8s forwards
+        img
+            height: 90%
+            opacity: 0
+            transform: translateY(140px)
+            animation: land2 1s ease-in-out 0.6s forwards
 
 
 // Page Contact
@@ -377,6 +464,15 @@ footer
             object-fit: cover
             transform: translateX(-110%)
             animation: land2 0.8s ease-in-out 0.2s forwards
+
+@media screen and (width < 800px)
+    .infocontact .image
+        display: none
+    .couleur
+        padding-left: 25vw
+        width: 90vw
+    .infocontact
+        padding-top: 2rem
 
 .formulaire
     color: #121020
@@ -442,7 +538,6 @@ footer
         &:hover
             box-shadow: 6px 6px 0 0 grey
             scale: 1.2
-
 
 // Page Tarifs
 .infotarifs
@@ -541,7 +636,6 @@ footer
         width: 45vw
         height: calc( 45vw / 1.5 )
 
-        
 // Animations
 @keyframes pouf
     100%
