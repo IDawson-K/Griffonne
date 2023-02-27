@@ -281,7 +281,12 @@ nav .liens div:hover .barre {
   align-items: center;
   box-shadow: 0 0 12px grey;
 }
-.mobilenav .ico {
+.mobilenav a {
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+.mobilenav a .ico {
   height: 100%;
   flex-grow: 1;
   display: flex;
@@ -290,7 +295,7 @@ nav .liens div:hover .barre {
   align-items: center;
   font-size: 0.7rem;
 }
-.mobilenav .ico img {
+.mobilenav a .ico img {
   height: 25%;
 }
 
