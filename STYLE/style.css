@@ -282,7 +282,7 @@ nav .liens div:hover .barre {
   box-shadow: 0 0 12px grey;
 }
 .mobilenav a {
-  height: 100%;
+  height: 60px;
   text-decoration: none;
   color: black;
 }
@@ -296,7 +296,7 @@ nav .liens div:hover .barre {
   font-size: 0.7rem;
 }
 .mobilenav a .ico img {
-  height: 25%;
+  height: 28%;
 }
 
 @media screen and (max-width: 600px) {
