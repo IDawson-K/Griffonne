@@ -294,7 +294,7 @@ nav .liens div:hover .barre {
   height: 30%;
 }
 
-@media screen and (width < 600px) {
+@media screen and (max-width: 600px) {
   nav {
     opacity: 0;
     pointer-events: none;
