@@ -291,7 +291,7 @@ nav .liens div:hover .barre {
   font-size: 0.7rem;
 }
 .mobilenav .ico img {
-  height: 30%;
+  height: 25%;
 }
 
 @media screen and (max-width: 600px) {
