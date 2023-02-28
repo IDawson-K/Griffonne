@@ -345,7 +345,7 @@ nav .liens div:hover .barre {
 }
 
 #signature {
-  width: calc(40px + 12vw + 22vh);
+  width: calc(15px + 10vw + 25vh);
   height: unset;
   filter: brightness(2);
   position: absolute;
