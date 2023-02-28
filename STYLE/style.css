@@ -319,7 +319,7 @@ nav .liens div:hover .barre {
 .carousel {
   background: #FFFDF9;
   text-align: center;
-  height: calc(200px + 20vh);
+  height: calc(260px + 12vh);
   top: 0px;
   z-index: 0;
   overflow-x: scroll !important;
@@ -345,7 +345,7 @@ nav .liens div:hover .barre {
 }
 
 #signature {
-  width: calc(20px + 8vw + 22vh);
+  width: calc(8% + 4vw + 20vh);
   height: unset;
   filter: brightness(2);
   position: absolute;
