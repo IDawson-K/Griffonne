@@ -482,10 +482,10 @@ footer .copy {
 footer .legal {
   display: flex;
   justify-content: center;
-  padding: 14px 12vw 14px 12vw;
+  padding: 16px 12vw 16px 12vw;
   box-sizing: border-box;
   position: relative;
-  bottom: 90px;
+  bottom: 100px;
   background: #121020;
   font-size: 0.7rem;
 }
