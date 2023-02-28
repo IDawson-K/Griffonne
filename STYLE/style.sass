@@ -302,6 +302,7 @@ footer
         bottom: 100px
         background: #121020
         font-size: 0.7rem
+        border: 3px solid red
         .liens
             display: flex
             div
@@ -321,6 +322,11 @@ footer
             transition: 0.3s
             &:hover
                 transform: scale(1.2)
+
+@media screen and (max-width: 800px)
+    footer
+        .legal
+            font-size: 0.5rem
 
 // Page Decouvrir
 .damier
@@ -368,7 +374,7 @@ footer
 
 .discover
     width: 100%
-    height: 400px
+    height: 320px
     overflow: hidden
     .bg
         position: relative
@@ -383,7 +389,7 @@ footer
     .gradentext
         color: #FFFDF9
         position: relative
-        top: -300px
+        top: -320px
         animation: land2 1s ease-in-out 0.4s forwards
     .flexbas
         display: flex
@@ -391,12 +397,12 @@ footer
         padding: 0 5vw
         height: 200px
         position: relative
-        top: -280px
+        top: -360px
         justify-content: center
         .text
             color: #FFFDF9
             width: 100%
-            height: 100%
+            height: 50%
             display: grid
             place-items: center
             text-align: center
@@ -404,7 +410,8 @@ footer
             transform: translateY(140px)
             animation: land2 1s ease-in-out 0.8s forwards
         img
-            height: 74%
+            height: 70%
+            margin-left: -10px
             opacity: 0
             transform: translateY(140px)
             animation: land2 1s ease-in-out 0.6s forwards
@@ -474,10 +481,15 @@ footer
     .infocontact .image
         display: none
     .couleur
-        padding-left: 25vw
+        padding-left: 2vw
         width: 90vw
+        img
+            margin-right: -48vw
+            margin-top: -100px
+            width: 150px !important
     .infocontact
-        padding-top: 2rem
+        padding-top: 1.5rem
+        height: 270px
 
 .formulaire
     color: #121020
@@ -598,22 +610,27 @@ footer
         padding-bottom: 30px
 
 .toutarif
-    background: #000
-    margin: auto
+    border: 3px solid green
     background: #FFFDF9
-    padding: 4rem 1rem
-    min-height: 300px
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-evenly
-    align-items: center
+    width: auto
+    padding: 2rem 2rem
+    height: 400px
+    display: grid
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr
+    gap: 20px
+    place-items: center
     perspective: 3000px
+    overflow-x: scroll
+    overflow-y: unset
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        display: none
     .card
-        margin: 2rem 0
-        width: 18vw
-        height: calc( 18vw / 1.5 )
-        text-align: center
+        width: 260px
+        height: 160px
         transform-style: preserve-3d
+        text-align: center
         &:hover .bg
             transform: rotateX(30deg)
             filter: brightness(0.4)
@@ -634,21 +651,26 @@ footer
             opacity: 0
             z-index: 2
             position: relative
-            bottom: 180px
-            width: 100px
+            bottom: 130px
+            width: calc( 60px + 2vw )
             filter: invert(1) drop-shadow(0 0 10px black)
             transition: 0.3s
-        .titre
+        .titre, .prix
+            z-index: 2
             position: relative
-            bottom: 260px
+            bottom: 200px
+            width: 180px
+            margin: auto
             color: #FFFDF9
             font-weight: 900
             letter-spacing: 2px
             text-shadow: 0 0 20px black
-            font-size: 1.5rem
+            font-size: 1.2rem
         .prix
+            margin-top: 30px
+            font-size: 1.3rem
 
-@media screen and (max-width: 768px)
+//@media screen and (max-width: 768px)
     .toutarif .card
         width: 45vw
         height: calc( 45vw / 1.5 )
