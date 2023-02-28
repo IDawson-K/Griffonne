@@ -483,6 +483,7 @@ footer .legal {
   display: flex;
   justify-content: center;
   padding: 16px 12vw 16px 12vw;
+  outline: 5px solid #121020;
   box-sizing: border-box;
   position: relative;
   bottom: 100px;
