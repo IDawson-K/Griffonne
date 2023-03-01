@@ -21,8 +21,5 @@ collections:
     folder: "/realisations"
     create: true
     fields:
-      - { name: "Titre", widget: "string" }
-      - { name: "Image", widget: "image" }
-      - { name: "truc", widget: "map" }
-      - { name: "Description", widget: "markdown" }
+      - { label: "realisations", widget: "markdown" }
 
