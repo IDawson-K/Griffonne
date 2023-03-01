@@ -17,7 +17,7 @@ media_folder: "/IMG"
 
 collections:
   - name: "réalisations"
-    label: "réalisation"
+    label: "réalisations"
     folder: "/admin"
     create: true
     fields:
