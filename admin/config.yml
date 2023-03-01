@@ -4,12 +4,12 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "../IMG"
+media_folder: "/IMG"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/content/blog"
+  - name: "réalisations"
+    label: "toutes les réalisations"
+    folder: "/admin"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
