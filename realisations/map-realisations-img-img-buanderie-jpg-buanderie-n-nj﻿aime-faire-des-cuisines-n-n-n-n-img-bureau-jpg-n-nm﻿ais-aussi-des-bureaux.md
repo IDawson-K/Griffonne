@@ -1,12 +1,18 @@
 ---
 realisations: |-
+  <﻿div>
+
   ![img](/IMG/buanderie.jpg "buanderie")
 
   J﻿'aime faire des cuisines
 
+  <﻿/div>
 
+  <﻿div>
 
-  ![](/IMG/bureau.jpg)
+  ![img](/IMG/chambre.jpg "buanderie")
 
-  M﻿ais aussi des bureaux.
+  J﻿'aime faire des trucs de fou
+
+  <﻿/div>
 ---
