@@ -2,6 +2,15 @@ backend:
   name: git-gateway
   branch: main
 
+site_url: https://griffonne.netlify.app/
+display_url: https://griffonne.netlify.app/
+logo_url: https://griffonne.netlify.app/IMG/Logo-Griffonne.svg
+
+locale: 'fr'
+
+media_library:
+  name: uploadcare
+
 publish_mode: editorial_workflow
 
 media_folder: "/IMG"
@@ -15,14 +24,4 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "products"
-    label: "Products"
-    folder: "src/content/products"
-    create: true
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Price", name: "price", widget: "number" }
-      - { label: "Image", name: "image", widget: "image" }
 
