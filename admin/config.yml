@@ -18,10 +18,11 @@ media_folder: "/IMG"
 collections:
   - name: "réalisations"
     label: "réalisations"
-    folder: "/admin"
+    folder: "/realisations"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { name: "Titre", widget: "string" }
+      - { name: "Image", widget: "image" }
+      - { name: "truc", widget: "map" }
+      - { name: "Description", widget: "markdown" }
 
