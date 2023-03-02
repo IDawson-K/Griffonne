@@ -917,6 +917,10 @@ footer .reseaux img:hover {
 .real {
   background: green;
 }
+.real * {
+  font-size: 40px;
+  font-weight: 300;
+}
 .real img {
   width: 300px;
 }
