@@ -22,5 +22,5 @@ collections:
     create: true
     fields:
       - {label: "Titre", name: "Title", widget: "string"}
-      - {label: "olala" name: "réalisations", widget: "markdown" }
+      - {label: "olala", name: "réalisations", widget: "markdown" }
 
