@@ -20,6 +20,5 @@ collections:
     create: true
     slug: "{{titre}}"
     fields:
-      - {label: "Titre", name: "Réalisations", widget: "string"}
-      - {label: "Realisations", name: "Realisations", description: "Mettez ici toutes vos réalisations", widget: "markdown"}
+      - {label: "Realisations", name: "Réalisations", description: "Mettez ici toutes vos réalisations", widget: "markdown"}
 
