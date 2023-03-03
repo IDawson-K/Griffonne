@@ -1,4 +1,4 @@
 ---
-thumbnail: /IMG/wc.png
+thumbnail: /IMG/favicon-light.png
 Réalisations: t﻿oilettes
 ---
