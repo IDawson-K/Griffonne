@@ -28,15 +28,15 @@ body
     width: 100vw
     height: 100vh
     z-index: 99
-    animation: pouf 1s ease-in-out 1.5s forwards
+    animation: pouf 1s ease-out 1.5s forwards
     .loading
         opacity: 0
         width: 320px
-        animation: load 1s ease-in-out 0.5s forwards
+        animation: load 1s ease-out 0.5s forwards
     img
         opacity: 0
         width: 260px
-        animation: land 1s ease-in-out forwards
+        animation: land 1s ease-out forwards
     .loadbar, .loadbarbg
         height: 8px
         border-radius: 999px
@@ -44,7 +44,7 @@ body
         bottom: 30vh
     .loadbar
         background: #FFFDF9
-        animation: charge 1s ease-in-out 0.8s forwards
+        animation: charge 1s ease-out 0.8s forwards
     .loadbarbg
         width: 320px
         background: grey
@@ -57,7 +57,7 @@ body
     justify-content: center
     width: 100vw
     transform: translateY(-120px)
-    animation: land2 1s ease-in-out forwards
+    animation: land2 1s ease-out forwards
 
 nav
     font-weight: 800
@@ -96,7 +96,7 @@ nav
             background: #7C2609
             width: 0%
             height: 3px
-            transition: 0.2s ease-in-out
+            transition: 0.2s ease-out
 
         div:hover .barre
             width: 100%
@@ -165,7 +165,7 @@ nav
         filter: brightness(0.6)
         opacity: 0
         transform: translateY(-80px)
-        animation: land2 0.8s ease-in-out 2s forwards
+        animation: land2 0.8s ease-out 2s forwards
 
 .carousel::-webkit-scrollbar
     height: 0px
@@ -180,7 +180,7 @@ nav
     transform: translateX(-50%)
     opacity: 0
     margin-top: 100px
-    animation: sign 0.8s ease-in-out 2.2s forwards
+    animation: sign 0.8s ease-out 2.2s forwards
 
 // Présentation
 .present
@@ -196,14 +196,14 @@ nav
         padding: 10px
         opacity: 0
         transform: translateX(-80px)
-        animation: land2 0.8s ease-in-out 3s forwards
+        animation: land2 0.8s ease-out 3s forwards
     .mojipres
         margin-top: 1rem
         height: 130px
         margin-left: 20px
         opacity: 0
         transform: translateY(50px)
-        animation: land2 0.6s ease-in-out 2.8s forwards
+        animation: land2 0.6s ease-out 2.8s forwards
     .explik
         max-width: 600px
         margin: 0 8vw
@@ -211,7 +211,7 @@ nav
         padding: 10px
         opacity: 0
         transform: translateX(80px)
-        animation: land2 0.8s ease-in-out 3s forwards
+        animation: land2 0.8s ease-out 3s forwards
 
 .gradentext
         text-align: center
@@ -225,7 +225,7 @@ nav
         background-size: 300%
         opacity: 0
         transform: translateY(50px)
-        animation: bgtext 3s infinite alternate-reverse, land2 1s ease-in-out 2.6s forwards
+        animation: bgtext 3s infinite alternate-reverse, land2 1s ease-out 2.6s forwards
 
 .rdv
     width: auto
@@ -338,7 +338,7 @@ footer
     flex-direction: column
     opacity: 0
     transform: translateY(140px)
-    animation: land2 1s ease-in-out 1s forwards
+    animation: land2 1s ease-out 1s forwards
     position: relative
     z-index: -3
     .fin, .debut
@@ -390,7 +390,7 @@ footer
         color: #FFFDF9
         position: relative
         top: -320px
-        animation: land2 1s ease-in-out 0.4s forwards
+        animation: land2 1s ease-out 0.4s forwards
     .flexbas
         display: flex
         align-items: flex-end
@@ -408,13 +408,13 @@ footer
             text-align: center
             opacity: 0
             transform: translateY(140px)
-            animation: land2 1s ease-in-out 0.8s forwards
+            animation: land2 1s ease-out 0.8s forwards
         img
             height: 70%
             margin-left: -10px
             opacity: 0
             transform: translateY(140px)
-            animation: land2 1s ease-in-out 0.6s forwards
+            animation: land2 1s ease-out 0.6s forwards
 
 
 // Page Contact
@@ -435,7 +435,7 @@ footer
             transform: translateY(100px)
             opacity: 0
             width: 180px
-            animation: land3 0.6s ease-in-out 1.4s forwards
+            animation: land3 0.6s ease-out 1.4s forwards
     .tout
         box-sizing: border-box
         padding-top: 4rem
@@ -449,44 +449,44 @@ footer
             margin: 8px 0 8px 1px
             opacity: 0
             transform: translateX(100px)
-            animation: land2 1s ease-in-out 0.4s forwards
+            animation: land2 1s ease-out 0.4s forwards
         .statut
             font-size: 0.8rem
             margin-bottom: 1rem
             opacity: 0
             transform: translateX(100px)
-            animation: land2 1s ease-in-out 0.6s forwards
+            animation: land2 1s ease-out 0.6s forwards
         .nom
             opacity: 0
             transform: translateX(100px)
-            animation: land2 1s ease-in-out 0.2s forwards
+            animation: land2 1s ease-out 0.2s forwards
         .tel
             margin-bottom: 0.5rem
             opacity: 0
             transform: translateX(100px)
-            animation: land2 1s ease-in-out 0.8s forwards
+            animation: land2 1s ease-out 0.8s forwards
         .mail
             opacity: 0
             transform: translateX(100px)
-            animation: land2 1s ease-in-out 1s forwards
+            animation: land2 1s ease-out 1s forwards
     .image
         img
             width: 90%
             height: 90%
             object-fit: cover
             transform: translateX(-110%)
-            animation: land2 0.8s ease-in-out 0.2s forwards
+            animation: land2 0.8s ease-out 0.2s forwards
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: 600px)
     .infocontact .image
         display: none
     .couleur
         padding-left: 2vw
         width: 90vw
         img
-            margin-right: -48vw
-            margin-top: -100px
-            width: 150px !important
+            margin-right: -65vw
+            margin-top: -60px
+            width: 110px !important
     .infocontact
         padding-top: 1.5rem
         height: 270px
@@ -500,12 +500,12 @@ footer
         margin-top: 4rem
         opacity: 0
         transform: translateX(30px)
-        animation: land2 0.8s ease-in-out 1.2s forwards
+        animation: land2 0.8s ease-out 1.2s forwards
     h3
         margin-bottom: 3rem
         opacity: 0
         transform: translateX(-30px)
-        animation: land2 0.8s ease-in-out 1.2s forwards
+        animation: land2 0.8s ease-out 1.2s forwards
     form, form div
         display: flex
         flex-direction: column
@@ -514,7 +514,7 @@ footer
     label
         opacity: 0
         transform: translateY(200px)
-        animation: land2 0.8s ease-in-out 1.4s forwards
+        animation: land2 0.8s ease-out 1.4s forwards
     input[type=email], textarea
         text-align: center
         width: 300px
@@ -527,7 +527,7 @@ footer
         transition: 0.4s
         opacity: 0
         transform: translateY(200px)
-        animation: land2 0.8s ease-in-out 1.6s forwards
+        animation: land2 0.8s ease-out 1.6s forwards
         &:hover
             width: 320px
     .marie
@@ -569,11 +569,11 @@ footer
     width: 100%
     text-align: center
     .moji
-        height: 70%
+        height: 60%
         margin-left: 4vw
         opacity: 0
         transform: translateX(-200px)
-        animation: land2 0.8s ease-in-out 0.8s forwards
+        animation: land2 0.8s ease-out 0.8s forwards
     .tarif
         z-index: 3
         width: 50%
@@ -585,12 +585,12 @@ footer
         padding-left: 30px
         opacity: 0
         transform: translateY(100px)
-        animation: land2 0.8s ease-in-out 0.6s forwards
+        animation: land2 0.8s ease-out 0.6s forwards
     .banner
         height: 100%
         opacity: 0
         transform: translateX(200px)
-        animation: land2 0.8s ease-in-out 0.4s forwards
+        animation: land2 0.8s ease-out 0.4s forwards
         img
             width: 600px
             height: 100%
@@ -604,10 +604,12 @@ footer
 
 @media screen and (max-width: 800px)
     .infotarifs .moji
-        height: 50%
+        height: 40%
+        margin-left: -0.1vh
     .infotarifs .tarif
-        margin-left: calc( 6vw + 150px )
+        margin-left: calc( 6vw + 100px )
         padding-bottom: 30px
+        font-size: 0.9rem
 
 .toutarif
     background: #FFFDF9
@@ -626,6 +628,9 @@ footer
     &::-webkit-scrollbar
         display: none
     .card
+        opacity: 0
+        transform: translateX(140px)
+        animation: land2 1s ease-out 0.8s forwards
         width: 260px
         height: 160px
         transform-style: preserve-3d
@@ -678,11 +683,39 @@ footer
 
 .real
     *
-        font-size: 40px
-        font-weight: 300
-    background: green
+        padding: 0.5rem
+        border: none
+        box-sizing: border-box
+    background: #FFFDF9
+    display: grid
+    place-items: center
+    text-align: center
+    h1, h2, h3, h4
+        margin-top: 4rem
+        font-weight: 900
+        font-size: 1.7rem
+        background-image: linear-gradient(90deg, rgba(208,149,25,1) 0%, rgba(124,38,9,1) 40%, rgba(18,16,32,1) 90%)
+        -webkit-background-clip: text
+        background-clip: text
+        color: transparent
+        background-size: 300%
+        opacity: 0
+        transform: translateX(-100px)
+        animation: bgtext 3s infinite alternate-reverse, land2 1s ease-out 0.2s forwards
+    h5, h6
+        opacity: 0
+        transform: translateY(50px)
+        animation: bgtext 3s infinite alternate-reverse, land2 1s ease-out 0.6s forwards
+    p
+        font-size: 0px
     img
-        width: 300px
+        width: calc( 300px + 10vw )
+        height: calc( 300px / 1.5 )
+        object-fit: cover
+        border-radius: 40px
+        opacity: 0
+        transform: translateX(100px)
+        animation: bgtext 3s infinite alternate-reverse, land2 1s ease-out 0.4s forwards
 
 // Animations
 @keyframes pouf
