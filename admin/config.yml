@@ -15,7 +15,7 @@ media_folder: "/IMG"
 
 collections:
   - name: "realisation"
-    label: "realisations"
+    label: "Réalisations"
     folder: "/realisations"
     create: true
     slug: "Réalisations"
