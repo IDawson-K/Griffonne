@@ -17,7 +17,7 @@ collections:
   - name: "realisation"
     label: "Réalisations"
     folder: "/realisations"
-    summary: "olalal c papossib"
+    summary: "Toutes les réalisations"
     create: true
     slug: "Réalisations"
     fields:
