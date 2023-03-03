@@ -431,6 +431,10 @@ footer {
   overflow: hidden;
   color: #FFFDF9;
 }
+footer * {
+  text-decoration: none;
+  color: #FFFDF9;
+}
 footer .bg {
   box-sizing: border-box;
   filter: blur(5px) brightness(0.5);
@@ -469,7 +473,7 @@ footer .box div div {
   cursor: pointer;
   transition: 0.4s;
 }
-footer .box div div:hover {
+footer .nav div:hover {
   letter-spacing: 2px;
   font-weight: 900;
   text-shadow: 0 0 10px #000;
@@ -713,13 +717,16 @@ footer .reseaux img:hover {
   place-items: center;
 }
 .formulaire h2 {
+  text-align: center;
   margin-top: 4rem;
+  margin-bottom: 1rem;
+  max-width: 80%;
   opacity: 0;
   transform: translateX(30px);
   animation: land2 0.8s ease-out 1.2s forwards;
 }
 .formulaire h3 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   opacity: 0;
   transform: translateX(-30px);
   animation: land2 0.8s ease-out 1.2s forwards;
@@ -731,6 +738,7 @@ footer .reseaux img:hover {
   align-items: center;
 }
 .formulaire label {
+  margin-top: 1rem;
   opacity: 0;
   transform: translateY(200px);
   animation: land2 0.8s ease-out 1.4s forwards;
@@ -759,7 +767,7 @@ footer .reseaux img:hover {
   border-radius: 0.8rem;
   box-sizing: border-box;
   padding: 1rem;
-  width: 300px;
+  width: 330px;
   height: 200px;
   padding: 5px 15px 5px 15px;
   text-align: justify;
