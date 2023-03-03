@@ -16,8 +16,8 @@ publish_mode: editorial_workflow
 media_folder: "/IMG"
 
 collections:
-  - name: "réalisations"
-    label: "réalisations"
+  - name: "realisation"
+    label: "realisations"
     folder: "/realisations"
     create: true
     fields:
