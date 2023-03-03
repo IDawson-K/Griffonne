@@ -18,7 +18,6 @@ collections:
     label: "realisations"
     folder: "/realisations"
     identifier_field: label
-    extension: html
     create: true
     slug: "{{titre}}"
     fields:
