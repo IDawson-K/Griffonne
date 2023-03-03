@@ -1,4 +1,4 @@
 ---
-thumbnail: /IMG/favicon-light.png
+thumbnail: /IMG/buanderie.jpg
 Réalisations: t﻿oilettes
 ---
