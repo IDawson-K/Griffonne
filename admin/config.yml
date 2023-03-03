@@ -17,7 +17,6 @@ collections:
   - name: "realisation"
     label: "realisations"
     folder: "/realisations"
-    identifier_field: label
     create: true
     slug: "{{titre}}"
     fields:
