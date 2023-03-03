@@ -11,16 +11,17 @@ locale: 'fr'
 media_library:
   name: uploadcare
 
-publish_mode: editorial_workflow
-
 media_folder: "/IMG"
 
 collections:
   - name: "realisation"
     label: "realisations"
     folder: "/realisations"
+    identifier_field: label
+    extension: html
     create: true
+    slug: "{{titre}}"
     fields:
-      - {label: "Titre", name: "Titre", widget: "string"}
+      - {label: "Titre", name: "titre", widget: "string"}
       - {label: "olala", name: "Realisations", widget: "markdown"}
 
