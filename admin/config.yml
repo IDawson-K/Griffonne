@@ -17,10 +17,10 @@ collections:
   - name: "realisation"
     label: "Réalisations"
     folder: "/realisations"
+    summary: "olalal c papossib"
     create: true
     slug: "Réalisations"
     fields:
-      - label: "Réalisations"
-        name: "Réalisations"
-        widget: "markdown"
+      - {label: "Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Réalisations", name: "Réalisations", widget: "markdown"}
 
