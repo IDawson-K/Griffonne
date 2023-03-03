@@ -20,5 +20,7 @@ collections:
     create: true
     slug: "Réalisations"
     fields:
-      - {label: "Realisations", name: "Realisations", widget: "markdown"}
+      - label: "Réalisations"
+        name: "Réalisations"
+        widget: "markdown"
 
