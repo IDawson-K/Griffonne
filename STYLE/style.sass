@@ -254,6 +254,10 @@ footer
         text-decoration: none
         color: #FFFDF9
 
+    .contact
+        div
+            min-width: 100%
+
     .bg
         box-sizing: border-box
         filter: blur(5px) brightness(0.5)
@@ -263,20 +267,23 @@ footer
         transform: scale(1.05)
 
     .box
-        height: 240px
+        gap: 2vw
+        height: 200px
         width: 80%
-        padding-left: 10%
         padding-top: 20px
         margin: auto
         position: relative
-        bottom: 490px
+        bottom: 480px
         display: flex
-        justify-content: space-between
-        align-items: center
+        justify-content: center
         div
-            text-align: justify
-            width: 500px
+            text-align: center
+            width: calc( 200px + 2vw )
             height: 90%
+            a, div
+                width: 120%
+                div
+                    margin: auto
             h3
                 padding-bottom: 0.8rem
             div
@@ -291,7 +298,7 @@ footer
         text-shadow: 0 0 10px #000
 
     .copy
-        font-size: 0.6rem
+        font-size: calc( 0.5rem + 0.5vw )
         position: relative
         bottom: 110px
         text-align: center
@@ -328,10 +335,13 @@ footer
 
 @media screen and (max-width: 800px)
     footer
+        height: 340px
+        .box
+            bottom: 430px
+
         *:not(.liens div)
             font-size: 0.8rem
-        .box
-            padding-left: 0 !important
+
         .liens div
             font-size: 0.5rem
 
@@ -697,6 +707,7 @@ footer
         padding: 0.5rem
         border: none
         box-sizing: border-box
+    min-height: 100vh
     background: #FFFDF9
     display: grid
     place-items: center
@@ -720,9 +731,6 @@ footer
     p
         font-size: 0px
     img
-        width: calc( 300px + 10vw )
-        height: calc( 300px / 1.5 )
-        object-fit: cover
         border-radius: 40px
         opacity: 0
         transform: translateX(100px)
