@@ -519,7 +519,7 @@ footer .reseaux img:hover {
 }
 
 @media screen and (max-width: 800px) {
-  footer * {
+  footer *:not(.legal) {
     font-size: 0.8rem;
   }
   footer .box {
