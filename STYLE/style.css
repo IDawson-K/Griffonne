@@ -959,7 +959,8 @@ footer .reseaux img:hover {
 }
 .real md-block {
   height: 100%;
-  width: 100%;
+  margin: auto;
+  width: calc(95% - 5vw);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
