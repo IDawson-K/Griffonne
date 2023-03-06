@@ -51,7 +51,7 @@ body
 
 // Barre de Navigation
 .navbar
-    z-index: 2
+    z-index: 5
     position: fixed
     display: flex
     justify-content: center
@@ -65,7 +65,7 @@ nav
     position: absolute
     width: calc( 90% - 20vw )
     z-index: 1
-    background: rgba(0, 0, 0, 0.4)
+    background: rgb(18, 16, 32, 0.5)
     backdrop-filter: blur(6px)
     border: solid 1px rgba(255, 255, 255, 0.2)
     border-radius: 10px
@@ -727,7 +727,6 @@ footer
         transform: translateX(-100px)
         animation: bgtext 3s infinite alternate-reverse, land2 1s ease-out 0.2s forwards
     h5, h6
-        border: 3px solid red
         max-width: 680px
         opacity: 0
         transform: translateY(50px)
@@ -737,9 +736,9 @@ footer
     p
         font-size: 0px
     img
-        width: calc( 260px + 2vw )
+        width: calc( 250px + 4vw )
         margin: 0 1vw
-        height: calc( (260px + 2vw) / 1.6 )
+        height: calc( (250px + 4vw) / 1.6 )
         object-fit: cover
         border-radius: 20px
         outline: 1px solid brown
