@@ -652,6 +652,10 @@ footer
             border-radius: 10px
             width: 28%
             padding: 16px 32px
+            transition: 0.3s
+            cursor: pointer
+            &:hover
+                scale: 1.05
             .desc
                 padding: 22px 0px
                 text-align: justify
@@ -684,6 +688,7 @@ footer
             font-size: 1.2rem
 
 #panier
+    z-index: 9
     border-radius: 999px
     display: grid
     place-items: center
@@ -716,7 +721,7 @@ footer
     flex-direction: column
     justify-content: space-between
     position: fixed
-    z-index: 10
+    z-index: 9
     border-top-left-radius: 20px
     border-bottom-left-radius: 20px
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)
@@ -791,6 +796,37 @@ footer
             &:hover
                 transform: scale(1.1)
 
+.ajout
+    background: #7C2609
+    color: white
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    position: fixed
+    bottom: 54px
+    right: 44px
+    display: grid
+    place-items: center
+    z-index: 10
+    font-size: 0.7rem
+    opacity: 0
+    transform-origin: bottom right
+
+.anim
+    animation: ajout 0.8s ease-in
+
+@keyframes ajout
+    0%
+        opacity: 0
+        transform: scale(0)
+    20%
+        opacity: 1
+        transform: scale(1)
+    90%
+        opacity: 1
+    100%
+        opacity: 0
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button
@@ -826,6 +862,7 @@ input[type=number]
     opacity: 1
 
 .astuce
+    max-width: 90vw
     padding: 20px 0
     display: flex
     justify-content: center

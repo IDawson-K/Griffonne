@@ -32,9 +32,13 @@ document.querySelector("#vider").addEventListener("click", function () {
 // Ajout des objets au panier
 objets.forEach((e) => {
   e.addEventListener("click", function () {
+    document.querySelector(".ajout").classList.add("anim");
     document.querySelector("#cvide").style.display = "none";
     // Si l'objet n'est pas déja dans la liste
     if (!objetsAjoutes.includes(this)) {
+      setTimeout(() => {
+        document.querySelector(".ajout").classList.remove("anim");
+      }, 900);
       objetsAjoutes.push(this);
       var prix = parseInt(this.getAttribute("data-prix"));
       panier += prix;
@@ -82,5 +86,5 @@ document.querySelector("#valider").addEventListener("click", function () {
   m2 = document.querySelector(".surface").value;
   order = calculprix();
   panier = 0;
-  document.querySelector('#app').classList.remove('hidden');
+  document.querySelector("#app").classList.remove("hidden");
 });
