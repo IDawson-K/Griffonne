@@ -683,11 +683,157 @@ footer
         span
             font-size: 1.2rem
 
+#panier
+    border-radius: 999px
+    display: grid
+    place-items: center
+    position: fixed
+    bottom: 0
+    right: 0
+    margin: 30px 20px
+    padding: 5px
+    width: 40px
+    height: 40px
+    background: white
+    box-shadow: 0 0 10px grey
+    transition: 0.2s
+    cursor: pointer
+    &:hover
+        transform: scale(1.1)
+    &:active
+        transform: scale(0.8)
+
+.panier-item
+    background: #FFFDF9
+    box-sizing: border-box
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1)
+    padding: 5px 12px
+    border-radius: 10px
+    margin: 10px 0
+
+#paniertout
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: fixed
+    z-index: 10
+    border-top-left-radius: 20px
+    border-bottom-left-radius: 20px
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)
+    bottom: 120px
+    right: 0vh
+    height: 70vh
+    width: 90vw
+    max-width: 500px
+    background: white
+    transform: translateX(900px) scale(0)
+    transition: 0.3s ease-in-out
+    #contenuPanier
+        margin: 30px auto 10px auto
+        box-sizing: border-box
+        padding: 12px 20px
+        border: 1px solid #7C2609
+        border-radius: 10px
+        width: 80%
+    h4
+        background: rgb(161, 94, 56, 0.1)
+        letter-spacing: 2px
+        box-sizing: border-box
+        padding: 1rem
+        font-size: 1.6rem
+        margin: 20px 0
+        color: #121020
+        height: max-content
+        width: 100%
+        text-align: center
+    .total
+        margin: 40px 0
+        #total
+            box-sizing: border-box
+            padding: 8px
+            border: 1px solid #7C2609
+            border-radius: 10px
+            width: 120px
+            text-align: center
+            margin: 8px 0
+            cursor: not-allowed
+    #valider
+        border: none
+        background: rgb(27, 165, 0)
+        padding: 4px 12px
+        color: white
+        font-weight: 800
+        border-radius: 999px
+        cursor: pointer
+        width: max-content
+        margin: auto
+    #vider
+        background: rgb(162, 11, 0)
+        padding: 4px 12px
+        color: white
+        font-weight: 400
+        border-radius: 999px
+        cursor: pointer
+        width: max-content
+        margin: 0 auto
+    
+    .form
+        display: grid
+        place-items: center
+        .surface
+            border: 1px solid #7C2609
+            width: 120px
+            border-radius: 10px
+            box-sizing: border-box
+            padding: 8px
+            margin-bottom: 8px
+            transition: 0.3s
+            &:hover
+                transform: scale(1.1)
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+input[type=number]
+    -moz-appearance: textfield
+
+
+#cvide
+    display: grid
+    place-items: center
+    img
+        width: 40px
+
+.total
+    display: grid
+    place-items: center
+
+.active
+    transform: translateX(0px) !important
+
+.croix
+    transform: scale(0.8)
+    pointer-events: none
+    opacity: 0
+    transition: 0.3s
+    transition-delay: 3s
+
+.pop
+    transform: scale(1.2)
+    opacity: 1
+
 .astuce
     padding: 20px 0
     display: flex
     justify-content: center
     text-align: center
+
+.hidden
+    opacity: 0
+    pointer-events: none
 
 @media screen and ( max-width: 1000px )
     .card
