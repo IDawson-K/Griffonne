@@ -196,6 +196,7 @@ body {
   animation: land 1s ease-out forwards;
 }
 .loader .loadbar, .loader .loadbarbg {
+  display: none;
   height: 8px;
   border-radius: 999px;
   position: absolute;
@@ -505,8 +506,9 @@ footer .legal {
 }
 footer .legal .liens {
   display: flex;
+  cursor: pointer;
 }
-footer .legal .liens div {
+footer .legal .liens a {
   margin: 0 4px;
 }
 footer .reseaux {
@@ -536,7 +538,7 @@ footer .reseaux img:hover {
   footer *:not(.liens div) {
     font-size: 0.8rem;
   }
-  footer .liens div {
+  footer .liens a, footer .liens div {
     font-size: 0.5rem;
   }
 }
@@ -709,6 +711,14 @@ footer .reseaux img:hover {
   animation: land2 0.8s ease-out 0.2s forwards;
 }
 
+.rayon {
+  width: 100vw;
+  transform: scale(1.5);
+  z-index: -1;
+  position: relative;
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .infocontact .image {
     display: none;
@@ -725,6 +735,9 @@ footer .reseaux img:hover {
   .infocontact {
     padding-top: 1.5rem;
     height: 270px;
+  }
+  .rayon {
+    display: block;
   }
 }
 .formulaire {

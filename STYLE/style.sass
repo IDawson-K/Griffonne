@@ -38,6 +38,7 @@ body
         width: 260px
         animation: land 1s ease-out forwards
     .loadbar, .loadbarbg
+        display: none
         height: 8px
         border-radius: 999px
         position: absolute
@@ -315,7 +316,8 @@ footer
         font-size: 0.7rem
         .liens
             display: flex
-            div
+            cursor: pointer
+            a
                 margin: 0 4px
 
     .reseaux
@@ -342,7 +344,7 @@ footer
         *:not(.liens div)
             font-size: 0.8rem
 
-        .liens div
+        .liens a, .liens div
             font-size: 0.5rem
 
 // Page Decouvrir
@@ -494,6 +496,13 @@ footer
             transform: translateX(-110%)
             animation: land2 0.8s ease-out 0.2s forwards
 
+.rayon
+    width: 100vw
+    transform: scale(1.5)
+    z-index: -1
+    position: relative
+    display: none
+
 @media screen and (max-width: 600px)
     .infocontact .image
         display: none
@@ -507,6 +516,8 @@ footer
     .infocontact
         padding-top: 1.5rem
         height: 270px
+    .rayon
+        display: block
 
 .formulaire
     color: #121020
